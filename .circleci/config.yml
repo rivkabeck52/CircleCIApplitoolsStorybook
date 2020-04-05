@@ -14,12 +14,11 @@ jobs:
         paths:
         - ~/.npm
         - ~/.cache
-    - run: {}
-      command: 
-          | 
-          export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
-          echo $APPLITOOLS_BATCH_ID
-          npx eyes-storybook
+    - run:
+      command: | 
+        export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
+        echo $APPLITOOLS_BATCH_ID
+        npx eyes-storybook
 workflows:
   version: 2
   workflow:
