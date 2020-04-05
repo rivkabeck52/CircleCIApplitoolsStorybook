@@ -1,7 +1,7 @@
 jobs:
   build:
     # working_directory: ~/CircleCIApplitoolsStorybook
-    - run: {}
+    - run: 
       command: | 
         export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
         echo $APPLITOOLS_BATCH_ID
