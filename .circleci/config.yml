@@ -15,10 +15,11 @@ jobs:
         - ~/.npm
         - ~/.cache
     - run: {}
-      command: |
+      command: 
+        | 
         export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
         echo $APPLITOOLS_BATCH_ID
-        nx eyes-storybook
+        npx eyes-storybook
 workflows:
   version: 2
   workflow:
